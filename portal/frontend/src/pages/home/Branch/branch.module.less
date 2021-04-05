@@ -1,0 +1,43 @@
+@import '~antd/lib/style/themes/default.less';
+
+.listItem {
+  padding: 0 !important;
+
+  a {
+    display: block;
+  }
+
+  .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .left { 
+      flex: 0;
+      margin-right: 10px;
+
+      .icon {
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    .right {
+      flex: 1;
+
+      h3 {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      .description {
+        margin: 0;
+        line-height: 16px;
+        opacity: .5;
+      }
+    }
+  }
+}

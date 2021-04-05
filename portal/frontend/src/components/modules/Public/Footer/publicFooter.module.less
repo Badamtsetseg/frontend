@@ -1,0 +1,129 @@
+@import '~antd/lib/style/themes/default.less';
+
+.footerWrapper {
+  padding: 0 !important;
+  margin: 0;
+  background-color: @primary-color !important;
+
+  a,
+  p,
+  span {
+    color: white;
+    line-height: 16px;
+  }
+
+  span {
+    margin-right: 5px;
+    padding: 3px 10px;
+    border: 1px solid white;
+    border-radius: 6px;
+  }
+
+  a {
+    &:hover {
+      color: white;
+    }
+  }
+
+  img {
+    height: 40px;
+    width: auto;
+  }
+
+  .content {
+    padding: 35px 0;
+
+    :global(.ant-list-header) {
+      padding-top: 0;
+    }
+  }
+}
+
+.header {
+  padding: 25px 0 0 0;
+  margin: 0;
+
+  a {
+    display: inline-block;
+  }
+}
+
+.list {
+  div {
+    border-color: transparent !important;
+  }
+}
+
+.listHeader {
+  padding: 15px 0 0 0;
+  border: 0;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+
+  @media (min-width: @screen-sm-min) {
+    padding: 15px 0 0 0;
+  }
+
+  @media (min-width: @screen-md-min) {
+    padding: 0;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    padding: 0;
+  }
+}
+
+.listItem {
+  display: flex;
+  margin: 0 !important;
+  padding: 5px 0 !important;
+  border-color: transparent !important;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    display: inline-block;
+    flex: 0;
+    width: 6px;
+    height: 6px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: white;
+  }
+
+  a {
+    flex: 1;
+  }
+
+  &.contact {
+    padding: 0 0 !important;
+  }
+}
+
+.footer {
+  padding: 15px 0;
+  background-color: darken(@primary-color, 5%);
+
+  p {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+    line-height: 30px;
+  }
+
+  a {
+    text-align: right;
+    line-height: 30px;
+    color: white;
+  }
+}
+
+.ast {
+  float: right;
+}
+
+.google {
+  height: 30px;
+  margin-top: 15px;
+}

@@ -1,0 +1,38 @@
+@import '~antd/lib/style/themes/default.less';
+
+.menu {
+  padding: 25px;
+  background-color: @primary-color;
+  border-radius: @border-radius-base;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:last-child {
+        border: 0;
+      }
+
+      .left {
+        flex: 1;
+        padding: 15px 0;
+        color: white;
+        line-height: 16px;
+      }
+
+      .right {
+        padding-left: 10px;
+        font-size: 12px;
+        color: white;
+      }
+    }
+  }
+}

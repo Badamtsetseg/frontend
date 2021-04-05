@@ -1,0 +1,46 @@
+{
+  "name": "telcocom",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.4.0",
+    "@nivo/bar": "^0.67.0",
+    "@nivo/core": "^0.67.0",
+    "@nivo/line": "^0.67.0",
+    "animejs": "^3.2.1",
+    "antd": "^4.11.2",
+    "classnames": "^2.2.6",
+    "lottie-react-web": "^2.2.2",
+    "moment": "^2.29.1",
+    "next": "10.0.9",
+    "next-auth": "^3.3.0",
+    "next-seo": "^4.20.0",
+    "nprogress": "^0.2.0",
+    "numeral": "^2.0.6",
+    "react": "17.0.1",
+    "react-container-query": "^0.12.0",
+    "react-dom": "17.0.1",
+    "react-slick": "^0.28.1",
+    "react-visibility-sensor": "^5.1.1",
+    "swr": "^0.4.2",
+    "use-count-up": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/eslint-parser": "^7.12.1",
+    "@next/bundle-analyzer": "^10.0.9",
+    "babel-plugin-import": "^1.13.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.19.0",
+    "eslint-plugin-react": "^7.22.0",
+    "next-compose-plugins": "^2.2.1",
+    "next-plugin-antd-less": "^0.2.0",
+    "webpack": "^5.27.1"
+  }
+}

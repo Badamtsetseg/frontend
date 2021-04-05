@@ -1,0 +1,58 @@
+@import '~antd/lib/style/themes/default.less';
+
+.menuWrapper {
+  display: block;
+
+  :global(.ant-menu-horizontal) {
+    background-color: transparent !important;
+    border: 0;
+    line-height: calc(@layout-header-height / 2 - 10px) !important;
+  }
+
+  :global(.ant-menu-horizontal > .ant-menu-item),
+  :global(.ant-menu-dark.ant-menu-horizontal > .ant-menu-item) {
+    top: 0;
+    margin: 0 20px 0 0;
+    padding: 0 !important;
+    background-color: transparent !important;
+    border-bottom: 3px solid transparent !important;
+    line-height: calc(@layout-header-height / 2 - 13px) !important;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: white;
+    opacity: 1;
+  }
+
+  :global(.ant-menu-horizontal > .ant-menu-item > a) {
+    color: white;
+  }
+
+  :global(.ant-menu-horizontal > .ant-menu-item.ant-menu-item-selected),
+  :global(.ant-menu-horizontal > .ant-menu-item-active) {
+    border-color: white !important;
+  }
+
+  .userBtn {
+    padding: 0;
+    font-weight: bold;
+  }
+
+  button {
+    height: 40px;
+  }
+
+  &.mobile {
+    display: block;
+
+    :global(.ant-menu .ant-menu-item) {
+      margin: 10px 0 !important;
+      padding: 0;
+    }
+
+    :global(.ant-menu .ant-menu-item-selected),
+    :global(.ant-menu .ant-menu-item:hover),
+    :global(.ant-menu .ant-menu-item:focus) {
+      background-color: transparent;
+    }
+  }
+}

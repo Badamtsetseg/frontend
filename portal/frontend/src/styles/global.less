@@ -1,0 +1,135 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~antd/dist/antd.less';
+@import './antd-custom.less';
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Black.ttf");
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Medium.ttf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Regular.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Light.ttf");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto/Roboto-Thin.ttf");
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+
+html,
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @media (min-width: @screen-sm-min) {
+    width: @screen-sm;
+  }
+
+  @media (min-width: @screen-md-min) {
+    width: @screen-md;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    width: @screen-lg;
+  }
+
+  @media (min-width: @screen-xl-min) {
+    width: @screen-xl;
+  }
+}
+
+.title {
+  margin-bottom: 25px;
+  padding-left: 10px;
+  border-left: 3px solid @primary-color;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 18px;
+  color: @secondary-color;
+}
+
+.ant-skeleton.ant-skeleton-round {
+  .ant-skeleton-content {
+    .ant-skeleton-title {
+      height: 10px !important;
+      margin-top: 0 !important;
+    }
+    .ant-skeleton-paragraph {
+      margin-top: 15px !important;
+      
+      >li {
+        height: 10px !important;
+      }
+
+      >li + li {
+        margin-top: 10px !important;
+      }
+    }
+  }
+}
+
+.btn-secondary {
+  background-color: @secondary-color !important;
+  border-color: @secondary-color !important;
+  color: @primary-color !important;
+  text-shadow: none;
+  box-shadow: none !important;
+}
+
+.btn-white {
+  background-color: white !important;
+  border-color: white !important;
+  color: @primary-color !important;
+  text-shadow: none;
+  box-shadow: none !important;
+}
+
+.space-15 {
+  height: 15px;
+}
+
+.space-25 {
+  height: 25px;
+}
