@@ -38,7 +38,6 @@ const Home = () => {
           </Row>
         </div>
         <br />
-        <br />
         <Statistic />
         <br />
         <Systems />

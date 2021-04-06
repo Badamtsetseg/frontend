@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import {List, Button} from 'antd'
+import {List} from 'antd'
 import {RightOutlined} from '@ant-design/icons'
 import styles from './price.module.less'
 
@@ -45,7 +45,6 @@ const HomePrice = () => {
       <div className={styles.content}>
         <List
           className={styles.list}
-          size='small'
           dataSource={data}
           renderItem={item => (
             <List.Item className={styles.listItem}>
@@ -63,7 +62,6 @@ const HomePrice = () => {
                   </div>
                   <div className={styles.middle}>
                     <h3>{item.title}</h3>
-                    <p>{item.date}</p>
                   </div>
                   <div className={styles.right}>
                     <RightOutlined />
@@ -73,9 +71,9 @@ const HomePrice = () => {
             </List.Item>
           )}
         />
-        <div style={{textAlign: 'center'}}>
+        {/* <div style={{textAlign: 'center'}}>
           <Button type='primary' size='small'>Бүгдийг харах</Button>
-        </div>
+        </div> */}
       </div>
     </div>
   )

@@ -10,25 +10,32 @@ const PublicFooter = ({isMobile}) => {
   const partnerList = [
     {
       title: 'Мал эмнэлгийн ерөнхий газар',
-      url: '/',
+      url: 'http://vet.gov.mn/',
+      icon: 'https://mofa.gov.mn/exp/images/uploads/contact/meeg.png',
+    }, {
+      title: 'Жижиг, дунд үйлдвэрийн газар',
+      url: 'http://www.smefund.gov.mn/',
+      icon: 'https://mofa.gov.mn/exp/images/uploads/contact/logo11.png',
     }, {
       title: 'Малын удмын сангийн үндэсний төв',
-      url: '/',
+      url: 'http://www.genebank.gov.mn/',
+      icon: 'https://mofa.gov.mn/exp/images/uploads/contact/1-09.png',
     }, {
       title: 'Аймаг дундын отрын бэлчээр ашиглалтын захиргаа',
-      url: '/',
+      url: 'http://otor.gov.mn',
+      icon: 'https://mofa.gov.mn/exp/images/uploads/contact/t7nXNjcU0AWwuJK.png',
     }, {
       title: 'Хөдөө аж ахуйг дэмжих сан',
-      url: '/',
-    }, {
-      title: 'Жижиг, дунд үйлдвэрийг хөгжүүлэх сан',
-      url: '/',
+      url: 'http://khaads.mn/',
+      icon: 'https://mofa.gov.mn/exp/images/uploads/contact/khaadslogo.png',
     },  {
       title: 'ХАА-н Халхгол ҮБББЗ',
-      url: '/',
+      url: 'https://khalkhgol.mofa.gov.mn',
+      icon: 'https://mofa.gov.mn/exp/images/uploads/contact/tolgoi-logo-1-1536x311.png',
     },  {
       title: 'Хөдөө аж ахуйн бирж ТӨХХК',
-      url: '/',
+      url: 'http://www.mce.mn',
+      icon: 'https://mofa.gov.mn/exp/images/uploads/contact/tolgoi-logo-1-1536x311.png',
     },
   ]
 
@@ -104,7 +111,10 @@ const PublicFooter = ({isMobile}) => {
                   renderItem={item => (
                     <List.Item className={styles.listItem}>
                       <Link href={item.url}>
-                        {item.title}
+                        <a target='_blank'>
+                          <img src={item.icon} alt={item.title} style={{width: 30, height: 30}} />
+                          <span className={styles.title}>{item.title}</span>
+                        </a>
                       </Link>
                     </List.Item>
                   )}
@@ -121,9 +131,11 @@ const PublicFooter = ({isMobile}) => {
                   dataSource={cityList}
                   renderItem={item => (
                     <List.Item className={styles.listItem}>
-                      <span />
                       <Link href={item.url}>
-                        {item.title}
+                        <a target='_blank'>
+                          <span className={styles.dot} />
+                          {item.title}
+                        </a>
                       </Link>
                     </List.Item>
                   )}
@@ -136,8 +148,8 @@ const PublicFooter = ({isMobile}) => {
                   Баянзүрх дүүрэг, Энхтайваны өргөн чөлөө 16а,
                   Засгийн газрын IXа байр
                 </p>
-                <span>79991010</span>
-                <span>support@telcocom.mn</span>
+                <span className={styles.bordered}>79991010</span>
+                <span className={styles.bordered}>support@telcocom.mn</span>
               </Col>
             </Row>
           </div>
@@ -148,7 +160,7 @@ const PublicFooter = ({isMobile}) => {
           <Row gutter={25}>
             <Col xs={24} sm={24} md={12} lg={12}>
               <p>
-                Зохиогчийн эрх ©{moment().format('YYYY')} Хүнс, хөдөө аж ахуй, хөнгөн үйлдвэрийн яам
+                ©{moment().format('YYYY')} Хүнс, хөдөө аж ахуй, хөнгөн үйлдвэрийн яам
               </p>
             </Col>
             <Col xs={0} sm={24} md={12} lg={12} style={{textAlign: 'right'}}>

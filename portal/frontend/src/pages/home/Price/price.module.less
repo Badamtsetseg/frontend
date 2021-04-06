@@ -1,6 +1,7 @@
 @import '~antd/lib/style/themes/default.less';
 
 .wrapper {
+  margin-bottom: 15px;
   border: 1px solid #f5f5f5;
 
   .title {
@@ -15,13 +16,32 @@
     padding: 0 15px 15px 15px;
 
     .list {
-      height: 400px;
-      margin-bottom: 15px;
-      overflow-y: scroll;
     
       .listItem {
         display: block;
-        padding: 10px 0 !important;
+        position: relative;
+        padding: 10px 0 10px 10px !important;
+        cursor: pointer;
+
+        &:after {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 3px;
+          height: 0;
+          border-radius: 50px;
+          background-color: transparent;
+          transition: .3s all ease-in-out;
+        }
+
+        &:hover {
+          &:after {
+            top: 10px;
+            height: calc(100% - 20px);
+            background-color: @primary-color;
+          }
+        }
       
         a {
           display: block;

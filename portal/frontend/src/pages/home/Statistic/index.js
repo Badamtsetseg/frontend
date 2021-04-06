@@ -52,6 +52,7 @@ const HomeStatistic = () => {
               ))}
             </ul>
           </div>
+          <br />
         </Col>
         <Col xs={24} sm={24} md={16} lg={17}>
           <div className='title'>

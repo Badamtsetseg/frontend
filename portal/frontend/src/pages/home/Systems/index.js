@@ -74,12 +74,11 @@ const HomeSystems = () => {
         <div className='title'>
           Мэдээллийн системүүд
         </div>
-        <br />
         <List
           className={styles.list}
           grid={{
             gutter: 10,
-            xs: 1,
+            xs: 2,
             sm: 2,
             md: 3,
             lg: 6,
@@ -90,16 +89,18 @@ const HomeSystems = () => {
           renderItem={item => (
             <List.Item className={styles.listItem}>
               <Link href={item.link}>
-                <div className={styles.inner}>
-                  <div className={styles.icon}>
-                    <img
-                      src={item.icon}
-                      alt='logo-main'
-                    />
+                <a target='_blank'>
+                  <div className={styles.inner}>
+                    <div className={styles.icon}>
+                      <img
+                        src={item.icon}
+                        alt='logo-main'
+                      />
+                    </div>
+                    <h3>{item.title}</h3>
+                    {/* {item.link && <p>{item.link}</p>} */}
                   </div>
-                  <h3>{item.title}</h3>
-                  {item.link && <p>{item.link}</p>}
-                </div>
+                </a>
               </Link>
             </List.Item>
           )}

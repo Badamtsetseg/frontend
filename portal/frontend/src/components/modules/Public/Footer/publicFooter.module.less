@@ -12,7 +12,7 @@
     line-height: 16px;
   }
 
-  span {
+  .bordered {
     margin-right: 5px;
     padding: 3px 10px;
     border: 1px solid white;
@@ -82,18 +82,32 @@
   justify-content: center;
   align-items: center;
 
-  span {
+  .dot {
     display: inline-block;
-    flex: 0;
     width: 6px;
     height: 6px;
-    margin-right: 5px;
+    margin: 0 5px 0 0;
+    padding: 0;
     border-radius: 50%;
     background-color: white;
   }
 
-  a {
+  img {
+    flex: 0;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
+
+  .title {
     flex: 1;
+  }
+
+  a {
+    display: flex;
+    flex: 1;
+    align-items: center;
   }
 
   &.contact {

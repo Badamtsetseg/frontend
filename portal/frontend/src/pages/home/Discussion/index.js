@@ -34,7 +34,11 @@ const HomeDiscussion = () => {
       <div className={styles.content}>
         <List
           className={styles.list}
-          size='small'
+          loadMore={
+            <div style={{textAlign: 'center', paddingTop: 10}}>
+              <Button type='primary' size='small'>Бүгдийг харах</Button>
+            </div>
+          }
           dataSource={data}
           renderItem={item => (
             <List.Item className={styles.listItem}>
@@ -48,9 +52,6 @@ const HomeDiscussion = () => {
             </List.Item>
           )}
         />
-        <div style={{textAlign: 'center'}}>
-          <Button type='primary' size='small'>Бүгдийг харах</Button>
-        </div>
       </div>
     </div>
   )

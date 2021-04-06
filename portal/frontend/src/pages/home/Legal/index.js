@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import {List, Button} from 'antd'
+import {RightOutlined} from '@ant-design/icons'
 import styles from './legal.module.less'
 
 const HomeLegal = () => {
@@ -54,23 +54,27 @@ const HomeLegal = () => {
       <div className={styles.content}>
         <List
           className={styles.list}
-          size='small'
+          loadMore={
+            <div style={{textAlign: 'center', paddingTop: 10}}>
+              <Button type='primary' size='small'>Бүгдийг харах</Button>
+            </div>
+          }
           dataSource={data}
           renderItem={item => (
             <List.Item className={styles.listItem}>
               <Link href='/'>
-                <>
-                  <h3>{item.title}</h3>
-                  {/* <span className={styles.date}>{item.date}</span>
-                  <span className={styles.description}>{item.description}</span> */}
-                </>
+                <div className={styles.inner}>
+                  <div className={styles.left}>
+                    <h3>{item.title}</h3>
+                  </div>
+                  <div className={styles.right}>
+                    <RightOutlined />
+                  </div>
+                </div>
               </Link>
             </List.Item>
           )}
         />
-        <div style={{textAlign: 'center'}}>
-          <Button type='primary' size='small'>Бүгдийг харах</Button>
-        </div>
       </div>
     </div>
   )
