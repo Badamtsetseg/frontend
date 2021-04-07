@@ -5,33 +5,35 @@ import {RightOutlined} from '@ant-design/icons'
 
 import styles from './statistic.module.less'
 
+import Livestock from './Livestock'
+
 const {TabPane} = Tabs
 
 const HomeStatistic = () => {
-  const [active, setActive] = useState(0)
+  const [active, setActive] = useState('livestock')
   const menu = [
     {
-      key: 0,
+      key: 'livestock',
       title: 'Мал тэжээвэр амьтад',
     },
     {
-      key: 1,
+      key: 'areaSown',
       title: 'Тариалсан талбай ургамлын төрлөөр',
     },
     {
-      key: 2,
+      key: 'harvest',
       title: 'Хураасан нийт ургац, ургамлын төрлөөр',
     },
     {
-      key: 3,
+      key: 'agricultureArea',
       title: 'Хөдөө аж ахуйн газар',
     },
     {
-      key: 4,
+      key: 'agricultureProduction',
       title: 'Хөдөө аж ахуйн бүтээгдэхүүний нийт үйлдвэрлэл',
     },
     {
-      key: 5,
+      key: 'agricultureProduct',
       title: 'Хөдөө аж ахуйн гол нэр төрлийн бүтээгдэхүүний үйлдвэрлэл',
     },
   ]
@@ -43,7 +45,7 @@ const HomeStatistic = () => {
           <div className={styles.menu}>
             <ul>
               {menu.map(item => (
-                <li key={`statistic-menu-${item.key}`} onClick={() => setActive(item.key)}>
+                <li key={`statistic-menu-${item.key}`} className={active === item.key && styles.active} onClick={() => setActive(item.key)}>
                   <div className={styles.left}>{item.title}</div>
                   <div className={styles.right}>
                     <RightOutlined />
@@ -55,8 +57,8 @@ const HomeStatistic = () => {
           <br />
         </Col>
         <Col xs={24} sm={24} md={16} lg={17}>
-          <div className='title'>
-            {menu[active].title}
+          <div className={styles.wrapper}>
+            {active === 'livestock' && <Livestock />}
           </div>
         </Col>
       </Row>

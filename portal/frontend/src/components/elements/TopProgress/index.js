@@ -3,7 +3,7 @@ import Router from 'next/router'
 import NProgress from 'nprogress'
 
 const NProgressContainer = ({barColor}) => {
-  const [color, setColor] = useState('#002e77')
+  const [color, setColor] = useState('#FFF')
   const [showAfterMs] = useState(300)
   const [spinner] = useState(false)
   const [timer, setTimer] = useState(null)

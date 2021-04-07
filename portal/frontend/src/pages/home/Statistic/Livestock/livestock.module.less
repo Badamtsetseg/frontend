@@ -1,0 +1,46 @@
+@import '~antd/lib/style/themes/default.less';
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  position: relative;
+  padding: 50px 0;
+  background-position: center;
+  background-size: cover;
+
+  .item {
+    flex: 1;
+    text-align: center;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+    &:first-child {
+      border: 0;
+    }
+      
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 20px;
+    }
+
+    p {
+      margin: 0 0 25px 0;
+      font-size: 30px;
+      font-weight: 900;
+      color: @primary-color;
+      line-height: 30px;
+    }
+
+    span {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}

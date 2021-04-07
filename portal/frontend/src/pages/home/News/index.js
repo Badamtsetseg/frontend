@@ -52,7 +52,7 @@ const HomeNews = () => {
           <div className='title'>
             Онцлох мэдээ
           </div>
-          <Slider {...settings}>
+          <Slider {...settings} className={styles.sliderWrapper}>
             {data.map(item => (
               <div className={styles.sliderItem} key={item.id}>
                 <div className={styles.imageWrapper}>
@@ -60,6 +60,7 @@ const HomeNews = () => {
                 </div>
                 <div className={styles.content}>
                   <Paragraph ellipsis={{rows: 2, expandable: false}} className={styles.title}>{item.title}</Paragraph>
+                  <span>2021/04/02</span>
                   <Paragraph ellipsis={{rows: 3, expandable: false}} className={styles.description}>{item.description}</Paragraph>
                 </div>
               </div>
@@ -74,7 +75,6 @@ const HomeNews = () => {
           </div>
           <List
             className={styles.list}
-            size='small'
             dataSource={data}
             renderItem={(item, index) => (
               <List.Item className={styles.listItem} key={`news-right-${index}`}>
@@ -87,6 +87,7 @@ const HomeNews = () => {
                     </div>
                     <div className={styles.right}>
                     <Paragraph ellipsis={{rows: 3, expandable: false}} className={styles.title}>{item.title}</Paragraph>
+                    <span>2021/04/02</span>
                     <Paragraph ellipsis={{rows: 2, expandable: false}} className={styles.description}>{item.description}</Paragraph>
                     </div>
                   </div>
