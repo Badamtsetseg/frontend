@@ -44,7 +44,7 @@ const StatisticHarvest = () => {
             <div className={styles.icon}>
               <Image
                 src={item.icon}
-                alt='logo-main'
+                alt={item.label}
                 width={60}
                 height={60}
               />

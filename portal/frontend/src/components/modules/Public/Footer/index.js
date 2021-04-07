@@ -98,7 +98,7 @@ const PublicFooter = ({isMobile}) => {
                 height={60}
               />
             </div>
-            <br />
+            <Divider className={styles.divider} />
             <Row gutter={25}>
               <Col xs={24} sm={24} md={12} lg={7}>
                 <List
@@ -164,9 +164,12 @@ const PublicFooter = ({isMobile}) => {
               </p>
             </Col>
             <Col xs={0} sm={24} md={12} lg={12} style={{textAlign: 'right'}}>
-              <Link href='/'>Үйлчилгээний нөхцөл</Link>
-              <Divider type='vertical' />
-              <Link href='/'>Нууцлалын бодлого</Link>
+              <Image
+                src='/images/logo/astvision.svg'
+                alt='astvision-logo'
+                width={180}
+                height={50}
+              />
             </Col>
           </Row>
         </div>

@@ -48,14 +48,14 @@ const StatisticLivestock = () => {
 
   return (
     <>
-      <h3 className={styles.title}>Монгол улс малын тоогоор дэлхийд,<br />эзлэх байраар, сая толгой</h3>
+      <h3 className={styles.title}><span>Монгол улс малын тоо</span> дэлхийд эзлэх байраар/сая толгой</h3>
       <div className={styles.content} style={{backgroundImage: 'url(/images/background/livestock.png)'}}>
         {data.map(item => (
           <div key={item.key} className={styles.item}>
             <div className={styles.icon}>
               <Image
                 src={item.icon}
-                alt='logo-main'
+                alt={item.label}
                 width={120}
                 height={120}
               />
