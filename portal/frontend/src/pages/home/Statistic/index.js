@@ -1,13 +1,12 @@
 import {useState} from 'react'
-import Link from 'next/link'
-import {Row, Col, Tabs} from 'antd'
+import {Row, Col} from 'antd'
 import {RightOutlined} from '@ant-design/icons'
 
 import styles from './statistic.module.less'
 
 import Livestock from './Livestock'
-
-const {TabPane} = Tabs
+import AreaSown from './AreaSown'
+import Harvest from './Harvest'
 
 const HomeStatistic = () => {
   const [active, setActive] = useState('livestock')
@@ -59,6 +58,8 @@ const HomeStatistic = () => {
         <Col xs={24} sm={24} md={16} lg={17}>
           <div className={styles.wrapper}>
             {active === 'livestock' && <Livestock />}
+            {active === 'areaSown' && <AreaSown />}
+            {active === 'harvest' && <Harvest />}
           </div>
         </Col>
       </Row>
