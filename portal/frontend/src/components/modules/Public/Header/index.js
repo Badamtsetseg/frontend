@@ -54,7 +54,7 @@ const PublicHeader = ({isMobile}) => {
             <div className={styles.right}>
               <ul>
                 <li>
-                  <Link href=''>Имэйл шалгах</Link>
+                  <Link href='https://email.gov.mn'><a target='_blank'>Имэйл шалгах</a></Link>
                 </li>
                 <li>
                   <Link href=''>Асуулт хариулт</Link>

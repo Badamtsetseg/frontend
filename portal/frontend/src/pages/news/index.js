@@ -8,7 +8,7 @@ import styles from './news.module.less'
 
 const {SubMenu} = Menu
 
-const NewsList = () => {
+const NewsList = ({children}) => {
 
   const menu = [
     {
@@ -69,14 +69,16 @@ const NewsList = () => {
         </div>
         <Row gutter={25}>
           <Col xs={24} sm={24} md={12} lg={6}>
-            <ul>
+            <ul className={styles.menu}>
               {menu.map(item => (
-                <li key={item.id}>{item.title}</li>
+                <li key={item.id}>
+                  <Link href='/'>{item.title}</Link>
+                </li>
               ))}
             </ul>
           </Col>
           <Col xs={0} sm={24} md={12} lg={18}>
-            
+            {children}
           </Col>
         </Row>
       </div>

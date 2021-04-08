@@ -44,7 +44,8 @@ const PublicTopMenu = ({mode, isMobile}) => {
     {
       key: 'e-office',
       link: '/e-office',
-      title: 'Е-ОФФИСЕ'
+      title: 'Е-ОФФИСЕ',
+      publicLink: 'http://login.igovernment.mn/?continue=http%3A%2F%2Fmofa.igovernment.mn%2Fhome%2F'
     }, 
   ]
 
@@ -61,7 +62,15 @@ const PublicTopMenu = ({mode, isMobile}) => {
       >
         {menu.map((item) => (
           <Menu.Item key={item.key}>
-            <Link key={item.key} href={item.link}>{item.title}</Link>
+            <Link key={item.key} href={item.publicLink || item.link}>
+              {item.publicLink ? 
+                (
+                  <a target='_blank'>{item.title}</a>
+                )
+                :
+                item.title
+              }
+            </Link>
           </Menu.Item>
         ))}
       </Menu>

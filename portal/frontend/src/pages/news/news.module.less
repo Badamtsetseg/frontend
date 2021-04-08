@@ -1,0 +1,44 @@
+@import '~antd/lib/style/themes/default.less';
+
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      height: 0;
+      width: 3px;
+      border-radius: 50px;
+      background-color: @primary-color;
+      transition: .3s all ease-in-out;
+    }
+
+    &:last-child {
+      border: 0;
+    }
+
+    a {
+      display: block;
+      margin: 3px 0;
+      padding: 10px 0;
+      color: black;
+      line-height: 16px;
+    }
+
+    &:hover {
+      &:after {
+        top: 0;
+        height: 100%;
+      }
+    }
+  }
+}
