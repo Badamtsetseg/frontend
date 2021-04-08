@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
     "export": "next export",
     "start": "NODE_ENV=production node server.js"
@@ -15,7 +15,9 @@
     "@nivo/line": "^0.67.0",
     "animejs": "^3.2.1",
     "antd": "^4.11.2",
+    "body-parser": "^1.19.0",
     "classnames": "^2.2.6",
+    "express": "^4.17.1",
     "lottie-react-web": "^2.2.2",
     "moment": "^2.29.1",
     "next": "10.0.9",
