@@ -4,9 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "NODE_ENV=development node server.js",
-    "build": "yarn build:next && yarn build:server",
-    "build:next": "next build",
-    "build:server": "NODE_ENV=production babel server.js --out-dir .next/dist",
+    "build": "next build",
     "export": "next export",
     "start": "NODE_ENV=production node .next/dist/server.js"
   },
