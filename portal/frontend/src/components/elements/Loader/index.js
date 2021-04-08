@@ -9,8 +9,8 @@ const Loader = () => {
         options={{
           animationData: LoadingAnimation
         }}
-        width={50}
-        height={50}
+        width={150}
+        height={150}
       />
     </div>
   )
