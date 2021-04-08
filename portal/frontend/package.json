@@ -6,7 +6,7 @@
     "dev": "NODE_ENV=development node server.js",
     "build": "next build",
     "export": "next export",
-    "start": "NODE_ENV=production node .next/dist/server.js"
+    "start": "cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {
     "@ant-design/icons": "^4.4.0",
