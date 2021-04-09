@@ -1,140 +1,123 @@
 @import '~antd/lib/style/themes/default.less';
-@import '~antd/dist/antd.less';
-@import './antd-custom.less';
-
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Black.ttf");
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
+ @import '~antd/dist/antd.less';
+ @import './antd-custom.less';
+ @font-face {
+	 font-family: "Roboto";
+	 src: url("/fonts/Roboto/Roboto-Black.ttf");
+	 font-style: normal;
+	 font-weight: 900;
+	 font-display: swap;
 }
-
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Bold.ttf");
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
+ @font-face {
+	 font-family: "Roboto";
+	 src: url("/fonts/Roboto/Roboto-Bold.ttf");
+	 font-style: normal;
+	 font-weight: 700;
+	 font-display: swap;
 }
-
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Medium.ttf");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
+ @font-face {
+	 font-family: "Roboto";
+	 src: url("/fonts/Roboto/Roboto-Medium.ttf");
+	 font-style: normal;
+	 font-weight: 500;
+	 font-display: swap;
 }
-
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Regular.ttf");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
+ @font-face {
+	 font-family: "Roboto";
+	 src: url("/fonts/Roboto/Roboto-Regular.ttf");
+	 font-style: normal;
+	 font-weight: 400;
+	 font-display: swap;
 }
-
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Light.ttf");
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
+ @font-face {
+	 font-family: "Roboto";
+	 src: url("/fonts/Roboto/Roboto-Light.ttf");
+	 font-style: normal;
+	 font-weight: 300;
+	 font-display: swap;
 }
-
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto/Roboto-Thin.ttf");
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
+ @font-face {
+	 font-family: "Roboto";
+	 src: url("/fonts/Roboto/Roboto-Thin.ttf");
+	 font-style: normal;
+	 font-weight: 100;
+	 font-display: swap;
 }
-
-html,
-body {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: 'Roboto', sans-serif !important;
+ html, body {
+	 text-rendering: optimizeLegibility;
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+	 font-family: 'Roboto', sans-serif !important;
 }
-
-.container {
-  margin: 0 auto;
-  padding: 0 15px;
-
-  @media (min-width: @screen-sm-min) {
-    width: @screen-sm;
-  }
-
-  @media (min-width: @screen-md-min) {
-    width: @screen-md;
-  }
-
-  @media (min-width: @screen-lg-min) {
-    width: @screen-lg;
-  }
-
-  @media (min-width: @screen-xl-min) {
-    width: @screen-xl;
-  }
+ .container {
+	 margin: 0 auto;
+	 padding: 0 15px;
 }
-
-.title {
-  margin-bottom: 25px;
-  padding-left: 10px;
-  border-left: 3px solid @primary-color;
-  font-size: 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  line-height: 18px;
-  color: @secondary-color;
+ @media (min-width: 576px) {
+	 .container {
+		 width: 576px;
+	}
 }
-
-.ant-skeleton.ant-skeleton-round {
-  .ant-skeleton-content {
-    .ant-skeleton-title {
-      height: 10px !important;
-      margin-top: 0 !important;
-    }
-    .ant-skeleton-paragraph {
-      margin-top: 15px !important;
-      
-      >li {
-        height: 10px !important;
-      }
-
-      >li + li {
-        margin-top: 10px !important;
-      }
-    }
-  }
+ @media (min-width: 768px) {
+	 .container {
+		 width: 768px;
+	}
 }
-
-.btn-secondary {
-  background-color: @secondary-color !important;
-  border-color: @secondary-color !important;
-  color: @primary-color !important;
-  text-shadow: none;
-  box-shadow: none !important;
+ @media (min-width: 992px) {
+	 .container {
+		 width: 992px;
+	}
 }
-
-.btn-white {
-  background-color: white !important;
-  border-color: white !important;
-  color: @primary-color !important;
-  text-shadow: none;
-  box-shadow: none !important;
+ @media (min-width: 1200px) {
+	 .container {
+		 width: 1200px;
+	}
 }
-
-.space-15 {
-  height: 15px;
+ .title {
+	 margin-bottom: 25px;
+	 padding-left: 10px;
+	 border-left: 3px solid #fb842a;
+	 font-size: 16px;
+	 font-weight: bold;
+	 text-transform: uppercase;
+	 line-height: 18px;
+	 color: #1f39a2;
 }
-
-.space-25 {
-  height: 25px;
+ .ant-skeleton.ant-skeleton-round .ant-skeleton-content .ant-skeleton-title {
+	 height: 10px !important;
+	 margin-top: 0 !important;
 }
-
-.breadcrumb {
-  margin: 0;
-  padding: 15px 0;
+ .ant-skeleton.ant-skeleton-round .ant-skeleton-content .ant-skeleton-paragraph {
+	 margin-top: 15px !important;
 }
+ .ant-skeleton.ant-skeleton-round .ant-skeleton-content .ant-skeleton-paragraph >li {
+	 height: 10px !important;
+}
+ .ant-skeleton.ant-skeleton-round .ant-skeleton-content .ant-skeleton-paragraph >li + li {
+	 margin-top: 10px !important;
+}
+ .btn-secondary {
+	 background-color: #1f39a2 !important;
+	 border-color: #1f39a2 !important;
+	 color: #fb842a !important;
+	 text-shadow: none;
+	 box-shadow: none !important;
+}
+ .btn-white {
+	 background-color: white !important;
+	 border-color: white !important;
+	 color: #fb842a !important;
+	 text-shadow: none;
+	 box-shadow: none !important;
+}
+ .space-15 {
+	 height: 15px;
+}
+ .space-25 {
+	 height: 25px;
+}
+ .breadcrumb {
+	 margin: 0;
+	 padding: 15px 0;
+}
+ 
