@@ -4,7 +4,7 @@ import LayoutWrapper from '../components/layouts'
 import {TopProgress} from '../components/elements'
 
 import '../styles/global.less'
-import '../styles/slick.less'
+import '../styles/slick.css'
 
 const MyApp = ({Component, pageProps}) => {
   const {session} = pageProps
