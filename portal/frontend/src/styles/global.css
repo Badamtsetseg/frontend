@@ -1,7 +1,4 @@
-@import '~antd/lib/style/themes/default.less';
- @import '~antd/dist/antd.less';
- @import './antd-custom.less';
- @font-face {
+@font-face {
 	 font-family: "Roboto";
 	 src: url("/fonts/Roboto/Roboto-Black.ttf");
 	 font-style: normal;
