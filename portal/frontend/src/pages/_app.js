@@ -3,7 +3,7 @@ import {Provider} from 'next-auth/client'
 import LayoutWrapper from '../components/layouts'
 import {TopProgress} from '../components/elements'
 
-import '../styles/global.less'
+import '../styles/global.css'
 import '../styles/slick.css'
 
 const MyApp = ({Component, pageProps}) => {
