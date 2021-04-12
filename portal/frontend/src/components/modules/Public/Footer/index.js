@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import {Layout, Row, Col, List, Divider} from 'antd'
+import {MailOutlined, GlobalOutlined, PhoneOutlined, PrinterOutlined} from '@ant-design/icons'
 import Image from 'next/image'
 import moment from 'moment'
 
@@ -148,8 +149,10 @@ const PublicFooter = ({isMobile}) => {
                   Баянзүрх дүүрэг, Энхтайваны өргөн чөлөө 16а,
                   Засгийн газрын IXа байр
                 </p>
-                <span className={styles.bordered}>79991010</span>
-                <span className={styles.bordered}>support@telcocom.mn</span>
+                <span className={styles.bordered}><MailOutlined /> mofa@mofa.gov.mn</span>
+                <span className={styles.bordered}><GlobalOutlined /> mofa.gov.mn</span>
+                <span className={styles.bordered}><PhoneOutlined /> 51-262271</span>
+                <span className={styles.bordered}><PrinterOutlined /> 51-263237</span>
               </Col>
             </Row>
           </div>

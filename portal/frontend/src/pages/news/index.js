@@ -1,12 +1,9 @@
-import {useState} from 'react'
 import {NextSeo} from 'next-seo'
 import Link from 'next/link'
-import {Breadcrumb, Row, Col, Menu} from 'antd'
-import {HomeOutlined, UserOutlined} from '@ant-design/icons'
+import {Breadcrumb, Row, Col} from 'antd'
+import {HomeOutlined} from '@ant-design/icons'
 
 import styles from './news.module.less'
-
-const {SubMenu} = Menu
 
 const NewsList = ({children}) => {
 
@@ -69,6 +66,9 @@ const NewsList = ({children}) => {
         </div>
         <Row gutter={25}>
           <Col xs={24} sm={24} md={12} lg={6}>
+            <div className='title'>
+              Мэдээ, мэдээлэл
+            </div>
             <ul className={styles.menu}>
               {menu.map(item => (
                 <li key={item.id}>

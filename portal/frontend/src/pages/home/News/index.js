@@ -53,8 +53,8 @@ const HomeNews = () => {
             Онцлох мэдээ
           </div>
           <Slider {...settings} className={styles.sliderWrapper}>
-            {data.map(item => (
-              <div className={styles.sliderItem} key={item.id}>
+            {data.map((item, index) => (
+              <div className={styles.sliderItem} key={`important-news-${index}`}>
                 <div className={styles.imageWrapper}>
                   <div className={styles.image} style={{backgroundImage: `url(${item.image})`}} />
                 </div>
@@ -86,9 +86,9 @@ const HomeNews = () => {
                       </div>
                     </div>
                     <div className={styles.right}>
-                    <Paragraph ellipsis={{rows: 3, expandable: false}} className={styles.title}>{item.title}</Paragraph>
-                    <span>2021/04/02</span>
-                    <Paragraph ellipsis={{rows: 2, expandable: false}} className={styles.description}>{item.description}</Paragraph>
+                      <Paragraph ellipsis={{rows: 3, expandable: false}} className={styles.title}>{item.title}</Paragraph>
+                      <span>2021/04/02</span>
+                      <Paragraph ellipsis={{rows: 2, expandable: false}} className={styles.description}>{item.description}</Paragraph>
                     </div>
                   </div>
                 </Link>
