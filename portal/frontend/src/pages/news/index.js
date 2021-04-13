@@ -10,45 +10,46 @@ const NewsList = ({children}) => {
   const menu = [
     {
       title: 'Сүүлд нэмэгдсэн',
-      id: '0'
+      id: 'latest'
     },
     {
       title: 'Онцлох',
-      id: '1'
+      id: 'important'
     },
     {
       title: 'Цаг үе',
-      id: '2'
+      id: 'time'
     },
     {
       title: 'Фото мэдээ',
-      id: ''
+      id: 'photo'
     },
     {
       title: 'Видео мэдээ',
-      id: '3'
+      id: 'video'
     },
     {
       title: 'Атар-60',
-      id: '4'
+      id: 'atar-60'
     },
     {
       title: 'Хөнгөн-85',
-      id: ''
+      id: 'khungun-85'
     },
     {
       title: 'Хэвлэлийн мэдээ',
-      id: '5'
+      id: 'article'
     },
     {
       title: 'Урилга',
-      id: '6'
+      id: 'invitation'
     },
     {
       title: 'Их уншсан',
-      id: '7'
+      id: 'most'
     }
   ]
+  
   return (
     <>
       <NextSeo title='MOFA - Мэдээ, мэдээлэл'/>
@@ -72,7 +73,7 @@ const NewsList = ({children}) => {
             <ul className={styles.menu}>
               {menu.map(item => (
                 <li key={item.id}>
-                  <Link href='/'>{item.title}</Link>
+                  <Link href='/news/[type]' as={`/news/${item.id}`}>{item.title}</Link>
                 </li>
               ))}
             </ul>
