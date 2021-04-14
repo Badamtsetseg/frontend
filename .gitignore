@@ -1,0 +1,17 @@
+# idea
+.idea/
+*.iml
+
+# eclipse
+.project
+.classpath
+.factorypath
+.settings
+
+target/
+catalina.base_IS_UNDEFINED/
+nbproject/
+*.log
+
+# apm
+apm-*.log
