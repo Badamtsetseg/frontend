@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
 
-import {login} from '../../../services/auth'
+import {login} from '../../../common/services/auth'
 
 const options = {
   providers: [

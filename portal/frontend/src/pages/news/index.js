@@ -65,20 +65,24 @@ const NewsList = ({children}) => {
             <Breadcrumb.Item>Application</Breadcrumb.Item>
           </Breadcrumb>
         </div>
-        <Row gutter={25}>
-          <Col xs={24} sm={24} md={12} lg={6}>
-            <div className='title'>
-              Мэдээ, мэдээлэл
+        <Row gutter={15}>
+          <Col xs={24} sm={24} md={12} lg={5}>
+            <div className={styles.menu}>
+              <div className={styles.title}>
+                <span>Мэдээ, мэдээлэл</span>
+              </div>
+              <ul>
+                {menu.map(item => (
+                  <li key={item.id}>
+                    <Link as={`/news/${item.id}`} href='/news/[type]'>
+                      <a>{item.title}</a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className={styles.menu}>
-              {menu.map(item => (
-                <li key={item.id}>
-                  <Link href='/news/[type]' as={`/news/${item.id}`}>{item.title}</Link>
-                </li>
-              ))}
-            </ul>
           </Col>
-          <Col xs={0} sm={24} md={12} lg={18}>
+          <Col xs={0} sm={24} md={12} lg={19}>
             {children}
           </Col>
         </Row>

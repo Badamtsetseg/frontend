@@ -39,6 +39,15 @@ export async function doFetch(url, method, contentType, token, body) {
   return buildFetch(url, method, new Headers(headerParams), body)
 }
 
+export async function apiRequest(url, method, body) {
+  const headers = new Headers({
+    'Content-Type': 'application/x-www-form-urlencoded', // application/json
+    'Accept-Language': getLocale(),
+  })
+
+  return processResponse(buildFetch(url, method, headers, body))
+}
+
 export async function jsonRequest(url, method, token, body) {
   // console.log(method, 'method')
   // console.log(token, 'token')
