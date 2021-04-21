@@ -53,8 +53,8 @@ const NewsList = ({children}) => {
   return (
     <>
       <NextSeo title='MOFA - Мэдээ, мэдээлэл'/>
-      <div className='container'>
-        <div className='breadcrumb'>
+      <div className='breadcrumb'>
+        <div className='container'>
           <Breadcrumb>
             <Breadcrumb.Item href=''>
               <HomeOutlined />
@@ -65,6 +65,9 @@ const NewsList = ({children}) => {
             <Breadcrumb.Item>Application</Breadcrumb.Item>
           </Breadcrumb>
         </div>
+      </div>
+      <br />
+      <div className='container'>
         <Row gutter={15}>
           <Col xs={24} sm={24} md={12} lg={5}>
             <div className={styles.menu}>
@@ -74,7 +77,7 @@ const NewsList = ({children}) => {
               <ul>
                 {menu.map(item => (
                   <li key={item.id}>
-                    <Link as={`/news/${item.id}`} href='/news/[type]'>
+                    <Link as={`/news/${item.id}`} href='/news/[category]'>
                       <a>{item.title}</a>
                     </Link>
                   </li>

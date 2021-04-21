@@ -1,21 +1,18 @@
 import {observable, action, makeAutoObservable, runInAction} from 'mobx'
-import {getList, getById} from '../../services/shared/article'
+import {getList, getById, select} from '../../../services/shared/reference/data'
 
-export default class ArticleStore {
+export default class ReferenceDataStore {
   @observable data = {
     list: [],
     pagination: [],
   }
   @observable loading = true
 
-  @observable importantData = {
-    list: [],
-    pagination: [],
-  }
-  @observable importantLoading = true
-
   @observable currentData = {}
   @observable currentLoading = true
+
+  @observable selectData = {}
+  @observable selectLoading = true
 
   constructor() {
     makeAutoObservable(this)
@@ -35,19 +32,6 @@ export default class ArticleStore {
   }
 
   @action 
-  fetchImportantList(payload) {
-    this.importantLoading = true
-    getList(payload).then(response => {
-      if (response.result === true && response.data) {
-        runInAction(() => {
-          this.importantData = response.data
-        })
-      }
-      this.importantLoading = false
-    })
-  }
-
-  @action 
   fetchCurrent(payload) {
     this.currentLoading = true
     getById(payload).then(response => {
@@ -57,6 +41,19 @@ export default class ArticleStore {
         })
       }
       this.currentLoading = false
+    })
+  }
+
+  @action 
+  fetchSelect(payload) {
+    this.selectLoading = true
+    select(payload).then(response => {
+      if (response.result === true && response.data) {
+        runInAction(() => {
+          this.selectData = response.data
+        })
+      }
+      this.selectLoading = false
     })
   }
 }

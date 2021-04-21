@@ -1,6 +1,9 @@
+import {useEffect} from 'react'
 import Link from 'next/link'
 import {List, Row, Col, Typography} from 'antd'
+import {observer, inject} from 'mobx-react'
 import Slider from 'react-slick'
+import {Loader} from '../../../components/elements'
 
 import styles from './news.module.less'
 
@@ -8,86 +11,81 @@ const { Paragraph } = Typography
 const settings = {
   dots: true,
   infinite: true,
-  speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
-  autoPlay: true,
+  autoplay: false,
+  autoplaySpeed: 2000
 }
 
-const HomeNews = () => {
+const HomeNews = observer(({
+  articleStore, 
+  articleStore: {data, loading, importantData, importantLoading}
+}) => {
 
-  const data = [
-    {
-      title: 'Цар тахлын эрсдлээс хамтдаа урьдчилан сэргийлье',
-      description: 'Улсын онцгой комиссын даргын 3-р сарын 26-ны өдрийн тушаалаар Шуурхай зохицуулалтын ажлын хэсэг байгуулагдаж, зах, худалдааны төв хариуцсан бүлгийн даргаар ХХААХҮ-ийн сайд З.Мэндсайхан томилогдсон.',
-      image: 'https://mofa.gov.mn/exp/images/uploads/article/B472E043-0C1D-4C74-8915-7003DF9F1A89.jpeg',
-      url: '/home12',
-    },
-    {
-      title: 'Цар тахлын эрсдлээс хамтдаа урьдчилан сэргийлье',
-      description: 'Улсын онцгой комиссын даргын 3-р сарын 26-ны өдрийн тушаалаар Шуурхай зохицуулалтын ажлын хэсэг байгуулагдаж, зах, худалдааны төв хариуцсан бүлгийн даргаар ХХААХҮ-ийн сайд З.Мэндсайхан томилогдсон.',
-      image: 'https://mofa.gov.mn/exp/images/uploads/article/A04CB986-7775-4FDD-8A17-FBCFC3C799D3.jpeg',
-      url: '/home',
-    },
-    {
-      title: 'УРИАЛГА',
-      description: 'Улс орныг хамарсан цар тахал гарсан эрсдэлтэй үед шантрахгүй, амралтгүй ажиллаж байгаа нийт үйлдвэрлэгчид, малчид, тариаланчид, худалдаачид та бүхэндээ Монгол Улсын Засгийн газрын нэрийн өмнөөс болон салбар яамныхаа хамт олныг төлөөлөн гүн талархал илэрхийлье.',
-      image: 'https://mofa.gov.mn/exp/images/uploads/article/164053330_500401947655774_5529246579501111648_n.jpg',
-      url: '/home',
-    },
-    {
-      title: 'Худалдаа, үйлдвэрлэл эрхлэгч, нийлүүлэгчдийн үндэсний чуулган боллоо',
-      description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-      image: 'https://mofa.gov.mn/exp/images/uploads/article/167123146_500139324347121_2115561222103123462_n.jpg',
-      url: '/home',
-    },
-  ]
+  useEffect(() => {
+    articleStore.fetchList()
+    articleStore.fetchImportantList()
+  }, [])
 
   return (
     <div className='container'>
       <br />
-      <Row gutter={50}>
-        <Col xs={24} sm={24} md={14} lg={14}>
+      <Row gutter={25}>
+        <Col xs={24} sm={24} md={15} lg={15}>
           <div className='title'>
             Онцлох мэдээ
           </div>
-          <Slider {...settings} className={styles.sliderWrapper}>
-            {data.map((item, index) => (
-              <div className={styles.sliderItem} key={`important-news-${index}`}>
-                <div className={styles.imageWrapper}>
-                  <div className={styles.image} style={{backgroundImage: `url(${item.image})`}} />
-                </div>
-                <div className={styles.content}>
-                  <Paragraph ellipsis={{rows: 2, expandable: false}} className={styles.title}>{item.title}</Paragraph>
-                  <span>2021/04/02</span>
-                  <Paragraph ellipsis={{rows: 3, expandable: false}} className={styles.description}>{item.description}</Paragraph>
-                </div>
-              </div>
-            ))}
-          </Slider>
+          {importantLoading ? 
+            <Loader />
+            :
+            <Slider {...settings} className={styles.sliderWrapper}>
+              {importantData?.list?.map((item, index) => (
+                <Link 
+                  href='/news/[category]/[id]' 
+                  as={`/news/latest/${item.id}`} 
+                  key={`important-news-${index}`}
+                >
+                  <div className={styles.sliderItem}>
+                    <div className={styles.imageWrapper}>
+                      <div className={styles.image} style={{backgroundImage: `url(${item.coverImg?.url})`}} />
+                    </div>
+                    <div className={styles.content}>
+                      <Paragraph ellipsis={{rows: 2, expandable: false}} className={styles.title}>{item.title}</Paragraph>
+                      <span>{item.createdDateText || '-'}</span>
+                      <Paragraph ellipsis={{rows: 3, expandable: false}} className={styles.description}>{item.description}</Paragraph>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </Slider>
+          }
           <br />    
           <br />
         </Col>
-        <Col xs={24} sm={24} md={10} lg={10}>
+        <Col xs={24} sm={24} md={9} lg={9}>
           <div className='title'>
             Сүүлд нэмэгдсэн
           </div>
           <List
             className={styles.list}
-            dataSource={data}
+            dataSource={data?.list || []}
+            loading={loading}
             renderItem={(item, index) => (
               <List.Item className={styles.listItem} key={`news-right-${index}`}>
-                <Link href={item.url}>
+                <Link 
+                  href='/news/[category]/[id]' 
+                  as={`/news/latest/${item.id}`}
+                >
                   <div className={styles.inner}>
                     <div className={styles.left}>
                       <div className={styles.imageWrapper}>
-                        <div className={styles.image} style={{backgroundImage: `url(${item.image})`}} />
+                        <div className={styles.image} style={{backgroundImage: `url(${item.coverImg?.url})`}} />
                       </div>
                     </div>
                     <div className={styles.right}>
                       <Paragraph ellipsis={{rows: 3, expandable: false}} className={styles.title}>{item.title}</Paragraph>
-                      <span>2021/04/02</span>
+                      <span>{item.createdDateText || '-'}</span>
                       <Paragraph ellipsis={{rows: 2, expandable: false}} className={styles.description}>{item.description}</Paragraph>
                     </div>
                   </div>
@@ -100,6 +98,6 @@ const HomeNews = () => {
       </Row>
     </div>
   )
-}
+})
 
-export default HomeNews
+export default inject('articleStore')(HomeNews)

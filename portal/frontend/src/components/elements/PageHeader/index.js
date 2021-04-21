@@ -6,17 +6,21 @@ import styles from './pageHeader.module.less'
 const PageHeader = ({routes, title, subTitle, action}) => {
   return (
     <div className={styles.wrapper}>
+      <div className={styles.breadcrumb}>
+        <div className='container'>
+          {routes && (
+            <Breadcrumb>
+              {routes.map((route, index) => (
+                <Breadcrumb.Item key={`breadcrumb-${index}`}>
+                  <Link href={route.link}>{route.title}</Link>
+                </Breadcrumb.Item>
+              ))}
+              <Breadcrumb.Item>{title}</Breadcrumb.Item>
+            </Breadcrumb>
+          )}
+        </div>
+      </div>
       <div className='container'>
-        {routes && (
-          <Breadcrumb>
-            {routes.map((route, index) => (
-              <Breadcrumb.Item key={`breadcrumb-${index}`}>
-                <Link href={route.link}>{route.title}</Link>
-              </Breadcrumb.Item>
-            ))}
-            <Breadcrumb.Item>{title}</Breadcrumb.Item>
-          </Breadcrumb>
-        )}
         {action ? (
           <Row gutter={25}>
             <Col xs={24} sm={24} md={12} lg={12}>

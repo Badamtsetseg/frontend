@@ -107,7 +107,7 @@
 	 margin: 0 5px;
 	 padding: 0;
 	 position: relative;
-	 width: 20px;
+	 width: 10px;
 }
  .slick-dots li button {
 	 background: 0 0;
@@ -120,7 +120,7 @@
 	 line-height: 0;
 	 outline: 0;
 	 padding: 5px;
-	 width: 20px;
+	 width: 10px;
 }
  .slick-dots li button:before {
 	 content: '';
@@ -129,8 +129,8 @@
 	 width: 5px;
 	 background-color: #fb842a;
 	 border-radius: 50%;
-	 top: calc(47%);
-	 left: calc(47%);
+	 top: calc(50% - 3px);
+	 left: calc(50% - 3px);
 	 text-align: center;
 	 opacity: .25;
 }
