@@ -43,7 +43,7 @@ const HomeNews = observer(({
               {importantData?.list?.map((item, index) => (
                 <Link 
                   href='/news/[category]/[id]' 
-                  as={`/news/latest/${item.id}`} 
+                  as={`/news/${item.category}/${item.id}`} 
                   key={`important-news-${index}`}
                 >
                   <div className={styles.sliderItem}>
@@ -75,7 +75,7 @@ const HomeNews = observer(({
               <List.Item className={styles.listItem} key={`news-right-${index}`}>
                 <Link 
                   href='/news/[category]/[id]' 
-                  as={`/news/latest/${item.id}`}
+                  as={`/news/${item.category}/${item.id}`}
                 >
                   <div className={styles.inner}>
                     <div className={styles.left}>

@@ -42,7 +42,7 @@ const HomeBranch = () => {
       title: 'Бүтээгдэхүүн',
       description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
       icon: '/images/icons/branch/icon-06.svg',
-      url: '/home',
+      url: '/branch/product',
     },
   ]
 
@@ -65,7 +65,10 @@ const HomeBranch = () => {
         dataSource={data}
         renderItem={item => (
           <List.Item className={styles.listItem}>
-            <Link href={item.url}>
+            <Link
+              href='/branch/[category]' 
+              as={`/branch/${item.category}`}
+            >
               <div className={styles.inner}>
                 <div className={styles.left}>
                   <div className={styles.icon}>

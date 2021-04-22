@@ -1,0 +1,36 @@
+@import '~antd/lib/style/themes/default.less';
+
+.header {
+  h3 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
+
+.content {
+  :global(.ant-collapse) {
+    // background-color: lighten(@background-color-primary, 3%);
+    background-color: transparent;
+    border: 0;
+    border-color: @background-color-primary;
+  }
+
+  :global(.ant-collapse .ant-collapse-item) {
+    margin-bottom: 15px;
+    border: 0;
+    border-color: @background-color-primary;
+  }
+
+  :global(.ant-collapse .ant-collapse-item .ant-collapse-header) {
+    background-color: lighten(@background-color-primary, 2%);
+    font-weight: 500;
+  }
+
+  :global(.ant-collapse .ant-collapse-item .ant-collapse-header span) {
+    color: @primary-color;
+  }
+
+  :global(.ant-collapse .ant-collapse-item .ant-collapse-content) {
+    border: 1px solid @background-color-primary;
+  }
+}

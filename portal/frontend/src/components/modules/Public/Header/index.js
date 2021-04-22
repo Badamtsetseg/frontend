@@ -57,7 +57,7 @@ const PublicHeader = ({isMobile}) => {
                   <Link href='https://email.gov.mn'><a target='_blank'>Имэйл шалгах</a></Link>
                 </li>
                 <li>
-                  <Link href=''>Асуулт хариулт</Link>
+                  <Link href='/faq'>Асуулт хариулт</Link>
                 </li>
                 <li>
                   <Link href=''>Сайтын бүтэц</Link>
