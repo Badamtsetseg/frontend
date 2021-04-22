@@ -5,7 +5,7 @@ import {observer, inject} from 'mobx-react'
 import Slider from 'react-slick'
 import {Loader} from '../../../components/elements'
 
-import styles from './news.module.less'
+import styles from './homeNews.module.less'
 
 const { Paragraph } = Typography
 const settings = {

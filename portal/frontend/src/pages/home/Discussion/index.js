@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import {List, Button} from 'antd'
-import styles from './discussion.module.less'
+import styles from './homeDiscussion.module.less'
 
 const HomeDiscussion = () => {
 

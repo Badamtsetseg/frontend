@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import {List, Typography} from 'antd'
-import styles from './branch.module.less'
+import styles from './homeBranch.module.less'
 
 const { Paragraph } = Typography
 

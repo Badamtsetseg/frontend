@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import {List} from 'antd'
-import styles from './systems.module.less'
+import styles from './homeSystems.module.less'
 
 const HomeSystems = () => {
 

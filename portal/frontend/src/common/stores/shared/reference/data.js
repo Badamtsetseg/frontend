@@ -47,7 +47,8 @@ export default class ReferenceDataStore {
   @action 
   fetchSelect(payload) {
     this.selectLoading = true
-    select(payload).then(response => {
+    const promise = select(payload)
+    promise.then(response => {
       if (response.result === true && response.data) {
         runInAction(() => {
           this.selectData = response.data
@@ -55,5 +56,6 @@ export default class ReferenceDataStore {
       }
       this.selectLoading = false
     })
+    return promise
   }
 }

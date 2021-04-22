@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import {List} from 'antd'
 import {RightOutlined} from '@ant-design/icons'
-import styles from './price.module.less'
+import styles from './homePrice.module.less'
 
 const HomePrice = () => {
 

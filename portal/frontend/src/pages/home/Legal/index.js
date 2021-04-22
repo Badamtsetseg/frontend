@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import {List, Button} from 'antd'
 import {RightOutlined} from '@ant-design/icons'
-import styles from './legal.module.less'
+import styles from './homeLegal.module.less'
 
 const HomeLegal = () => {
 

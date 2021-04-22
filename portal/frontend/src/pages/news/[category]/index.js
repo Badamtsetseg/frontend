@@ -1,5 +1,6 @@
 import {useEffect} from 'react'
 import Link from 'next/link'
+import {useRouter} from 'next/router'
 import {List, Typography} from 'antd'
 import {observer, inject} from 'mobx-react'
 
@@ -9,11 +10,19 @@ import NewsWrapper from '../index'
 
 const { Paragraph } = Typography
 
-const NewsList = observer(({articleStore, articleStore: {data, loading}}) => {
+export async function getServerSideProps(context) {
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}
 
+const NewsList = observer(({articleStore, articleStore: {data, loading}}) => {
+  const router = useRouter()
+  const {category} = router.query
+  
   useEffect(() => {
-    articleStore.fetchList({covidType: '602e43f332fbad1456ce6e31'})
-  }, [])
+    articleStore.fetchList({covidType: category})
+  }, [router])
 
   return (
     <NewsWrapper>
@@ -29,12 +38,12 @@ const NewsList = observer(({articleStore, articleStore: {data, loading}}) => {
         }}
         dataSource={data?.list || []}
         loading={loading}
-        renderItem={(item, index) => (
+        renderItem={item => (
           <List.Item key={item.id}>
             <Link 
               href='/news/[category]/[id]' 
-              as={`/news/latest/${item.id}`} 
-              key={`important-news-${index}`}
+              as={`/news/${category}/${item.id}`} 
+              key={`news-${item.id}`}
             >
               <div className={styles.item}>
                 <div className={styles.content}>

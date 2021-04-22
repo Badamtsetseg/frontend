@@ -17,6 +17,10 @@ const PublicTopMenu = ({mode, isMobile}) => {
       link: '/home',
       title: 'Нүүр'
     }, {
+      key: 'introduction',
+      link: '/introduction',
+      title: 'Танилцуулга'
+    }, {
       key: 'news',
       link: '/news',
       title: 'Мэдээ, мэдээлэл'
@@ -25,11 +29,6 @@ const PublicTopMenu = ({mode, isMobile}) => {
       key: 'clear',
       link: '/clear',
       title: 'Ил тод байдал'
-    }, 
-    {
-      key: 'pricing',
-      link: '/pricing',
-      title: 'Үнэ тариф'
     }, 
     {
       key: 'services',
