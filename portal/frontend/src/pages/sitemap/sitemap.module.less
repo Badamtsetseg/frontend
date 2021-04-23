@@ -1,0 +1,42 @@
+@import '~antd/lib/style/themes/default.less';
+
+.header {
+  h3 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
+
+.content {
+  .card {
+    padding: 15px 0;
+    border: 1px solid @border-color-base;
+
+    .header {
+      margin: 10px 0;
+      padding: 0 20px;
+      border-left: 3px solid @primary-color;
+      font-size: 18px;
+      font-weight: bold;
+      color: @primary-color;
+    }
+
+    .content {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          padding: 0;
+
+          a {
+            display: block;
+            padding: 5px 20px;
+            color: @text-color;
+          }
+        }
+      }
+    }
+  }
+}

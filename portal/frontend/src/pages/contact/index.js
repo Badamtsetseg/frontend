@@ -92,21 +92,50 @@ const Contact = observer(() => {
               <br />
               <h3 className={styles.title}>Яамны газар, хэлтсийн мэргэжилтнүүдийн утас</h3>
               <ul className={styles.list}>
-                <li><p>Дэд сайд <span>123</span></p></li>
                 <li>
-                  <p>Төрийн нарийн бичгийн дарга <span>123</span></p>
+                  <div className={styles.row}>
+                    <div className={styles.left}>Дэд сайд</div>
+                    <div className={styles.right}>123</div>
+                  </div>
+                </li>
+                <li>
+                  <div className={styles.row}>
+                    <div className={styles.left}>Төрийн нарийн бичгийн дарга</div>
+                    <div className={styles.right}>123</div>
+                  </div>
                   <ul>
                     <li>
-                      <p>Бодлого төлөвлөлтийн газрын дарга <span>123</span></p>
+                      <div className={styles.row}>
+                        <div className={styles.left}>Бодлого төлөвлөлтийн газрын дарга</div>
+                        <div className={styles.right}>123</div>
+                      </div>
                       <ul>
-                        <li><p>Санхүүгийн хэлтсийн дарга <span>123</span></p></li>
+                        <li>
+                          <div className={styles.row}>
+                            <div className={styles.left}>Санхүүгийн хэлтсийн дарга</div>
+                            <div className={styles.right}>123</div>
+                          </div>
+                        </li>
                       </ul>
                     </li>
                     <li>
-                      <p>Төрийн захиргааны удирдлагын газрын дарга <span>123</span></p>
+                      <div className={styles.row}>
+                        <div className={styles.left}>Төрийн захиргааны удирдлагын газрын дарга</div>
+                        <div className={styles.right}>123</div>
+                      </div>
                       <ul>
-                        <li><p>Хуулийн хэлтсийн дарга <span>123</span></p></li>
-                        <li><p>Гадаад хамтын ажиллагааны хэлтсийн дарга <span>123</span></p></li>
+                        <li>
+                          <div className={styles.row}>
+                            <div className={styles.left}>Хуулийн хэлтсийн дарга</div>
+                            <div className={styles.right}>123</div>
+                          </div>
+                        </li>
+                        <li>
+                          <div className={styles.row}>
+                            <div className={styles.left}>Гадаад хамтын ажиллагааны хэлтсийн дарга</div>
+                            <div className={styles.right}>123</div>
+                          </div>
+                        </li>
                       </ul>
                     </li>
                   </ul>
