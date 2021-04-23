@@ -36,11 +36,6 @@ const PublicTopMenu = ({mode, isMobile}) => {
       title: 'Үйлчилгээ'
     },  
     {
-      key: 'legal',
-      link: '/legal',
-      title: 'Хууль эрх зүй'
-    }, 
-    {
       key: 'e-office',
       link: '/e-office',
       title: 'Е-ОФФИСЕ',

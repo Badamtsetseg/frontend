@@ -8,7 +8,7 @@ import {HomeOutlined} from '@ant-design/icons'
 
 import {Loader} from '../../components/elements'
 
-import styles from './news.module.less'
+import styles from './links.module.less'
 
 export async function getServerSideProps(context) {
   return {
@@ -16,31 +16,31 @@ export async function getServerSideProps(context) {
   }
 }
 
-const NewsBase = observer(({children, referenceDataStore, referenceDataStore: {selectData, selectLoading}}) => {
+const LinksBase = observer(({children, referenceDataStore, referenceDataStore: {selectData, selectLoading}}) => {
   const [active, setActive] = useState(null)
   const router = useRouter()
-  const {category} = router.query
+  const {link} = router.query
 
   useEffect(() => {
-    if (category) {
-      setActive(category)
+    if (link) {
+      setActive(link)
     } else {
       referenceDataStore.fetchSelect({typeCode: 'COVID_TYPE'}).then(response => {
-        router.push(`/news/${response.data[0].key}`)
+        router.push(`/links/${response.data[0].key}`)
       })
     }
-  }, [category])
+  }, [link])
   
   return (
     <>
-      <NextSeo title='MOFA - Мэдээ, мэдээлэл' />
+      <NextSeo title='MOFA - Холбоос' />
       <div className='breadcrumb'>
         <div className='container'>
           <Breadcrumb>
             <Breadcrumb.Item href=''>
               Нүүр
             </Breadcrumb.Item>
-            <Breadcrumb.Item>Мэдээ, мэдээлэл</Breadcrumb.Item>
+            <Breadcrumb.Item>Холбоос</Breadcrumb.Item>
           </Breadcrumb>
         </div>
       </div>
@@ -53,12 +53,12 @@ const NewsBase = observer(({children, referenceDataStore, referenceDataStore: {s
             <Col xs={24} sm={24} md={12} lg={5}>
               <div className={styles.menu}>
                 <div className={styles.title}>
-                  <span>Мэдээ, мэдээлэл</span>
+                  <span>Холбоос</span>
                 </div>
                 <ul>
                   {selectData.map(item => (
                     <li key={item.key} className={active === item.key && styles.active}>
-                      <Link as={`/news/${item.key}`} href='/news/[category]'>{item.name}</Link>
+                      <Link as={`/links/${item.key}`} href='/links/[link]'>{item.name}</Link>
                     </li>
                   ))}
                 </ul>
@@ -74,4 +74,4 @@ const NewsBase = observer(({children, referenceDataStore, referenceDataStore: {s
   )
 })
 
-export default inject('referenceDataStore')(NewsBase)
+export default inject('referenceDataStore')(LinksBase)

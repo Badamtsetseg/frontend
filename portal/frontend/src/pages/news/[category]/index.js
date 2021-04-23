@@ -22,7 +22,7 @@ const NewsList = observer(({articleStore, articleStore: {data, loading}}) => {
   
   useEffect(() => {
     articleStore.fetchList({covidType: category})
-  }, [router])
+  }, [category])
 
   return (
     <NewsWrapper>
