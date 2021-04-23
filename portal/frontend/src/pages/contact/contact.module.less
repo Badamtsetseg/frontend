@@ -1,0 +1,65 @@
+@import '~antd/lib/style/themes/default.less';
+
+.header {
+  h3 {
+    font-size: 26px;
+    font-weight: bold;
+  }
+}
+
+.content {
+  .card {
+    border: 1px solid @border-color-base;
+    border-radius: @border-radius-base;
+
+    .header {
+      display: flex;
+      padding: 15px 25px;
+
+      .left {
+        flex: 0;
+        font-size: 40px;
+        color: @primary-color;
+      }
+
+      .right {
+        display: flex;
+        flex: 1;
+        padding-left: 25px;
+        line-height: 16px;
+        align-items: center;
+      }
+    }
+  }
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    border-top: 1px solid @border-color-base;
+
+    p {
+      margin: 0;
+      padding: 10px 0;
+
+      span {
+        float: right;
+        color: @primary-color;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0 0 15px;
+    list-style: none;
+  }
+}

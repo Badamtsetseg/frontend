@@ -38,7 +38,7 @@ const BranchBase = observer(({children, referenceDataStore, referenceDataStore: 
         <div className='container'>
           <Breadcrumb>
             <Breadcrumb.Item href=''>
-              <HomeOutlined />
+              Нүүр
             </Breadcrumb.Item>
             <Breadcrumb.Item>Салбарууд</Breadcrumb.Item>
           </Breadcrumb>

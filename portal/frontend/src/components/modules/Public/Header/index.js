@@ -60,13 +60,13 @@ const PublicHeader = ({isMobile}) => {
                   <Link href='/faq'>Асуулт хариулт</Link>
                 </li>
                 <li>
-                  <Link href=''>Сайтын бүтэц</Link>
+                  <Link href='/site-map'>Сайтын бүтэц</Link>
                 </li>
                 <li>
-                  <Link href=''>Холбоо барих</Link>
+                  <Link href='/contact'>Холбоо барих</Link>
                 </li>
                 <li>
-                  <Link href=''>Вэб холбоос</Link>
+                  <Link href='/links'>Вэб холбоос</Link>
                 </li>
               </ul>
             </div>

@@ -38,7 +38,7 @@ const IntroductionBase = observer(({children, referenceDataStore, referenceDataS
         <div className='container'>
           <Breadcrumb>
             <Breadcrumb.Item href=''>
-              <HomeOutlined />
+              Нүүр
             </Breadcrumb.Item>
             <Breadcrumb.Item>Танилцуулга</Breadcrumb.Item>
           </Breadcrumb>

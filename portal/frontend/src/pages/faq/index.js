@@ -37,7 +37,7 @@ const BranchBase = observer(() => {
         <div className='container'>
           <Breadcrumb>
             <Breadcrumb.Item href=''>
-              <HomeOutlined />
+              Нүүр
             </Breadcrumb.Item>
             <Breadcrumb.Item>Түгээмэл асуулт, хариулт</Breadcrumb.Item>
           </Breadcrumb>

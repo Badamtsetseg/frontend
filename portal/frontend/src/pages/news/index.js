@@ -38,7 +38,7 @@ const NewsBase = observer(({children, referenceDataStore, referenceDataStore: {s
         <div className='container'>
           <Breadcrumb>
             <Breadcrumb.Item href=''>
-              <HomeOutlined />
+              Нүүр
             </Breadcrumb.Item>
             <Breadcrumb.Item>Мэдээ, мэдээлэл</Breadcrumb.Item>
           </Breadcrumb>
