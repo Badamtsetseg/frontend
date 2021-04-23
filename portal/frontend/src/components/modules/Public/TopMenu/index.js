@@ -31,11 +31,6 @@ const PublicTopMenu = ({mode, isMobile}) => {
       title: 'Ил тод байдал'
     }, 
     {
-      key: 'services',
-      link: '/services',
-      title: 'Үйлчилгээ'
-    },  
-    {
       key: 'e-office',
       link: '/e-office',
       title: 'Е-ОФФИСЕ',
