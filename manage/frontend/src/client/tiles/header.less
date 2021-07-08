@@ -1,0 +1,60 @@
+@import '~antd/lib/style/themes/default';
+
+@pro-header-hover-bg: rgba(0, 0, 0, 0.025); //
+
+.container {
+  padding: 0 !important;
+  background-color: darken(@primary-color, 3%) !important;
+}
+
+.header {
+  position: relative;
+  height: @layout-header-height;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.trigger {
+  height: @layout-header-height;
+  padding: ~'calc((@{layout-header-height} - 20px) / 2)' 24px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s, padding 0s;
+
+  i {
+    color: white;
+  }
+  
+  &:hover {
+    background: @pro-header-hover-bg;
+  }
+}
+
+.logo {
+  display: inline-block;
+  height: @layout-header-height;
+  padding: 0 0 0 24px;
+  font-size: 20px;
+  line-height: @layout-header-height;
+  vertical-align: top;
+  cursor: pointer;
+  img {
+    display: inline-block;
+    height: 32px;
+    vertical-align: middle;
+  }
+}
+
+@media only screen and (max-width: @screen-md) {
+  .header {
+    i.trigger {
+      padding: 22px 12px;
+    }
+    .logo {
+      position: relative;
+      padding-right: 12px;
+      padding-left: 12px;
+    }
+  }
+}

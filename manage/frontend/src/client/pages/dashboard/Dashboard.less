@@ -1,0 +1,104 @@
+@import '~antd/lib/style/themes/default.less';
+
+.filter {
+  display: inline-block;
+
+  a {
+    color: rgba(0, 0, 0, 0.4);
+
+    &:hover {
+      color: @primary-color;
+    }
+
+    &.currentDate {
+      color: @primary-color;
+    }
+  }
+}
+
+.charts {
+  .salesBar {
+    padding: 0 0 32px 32px;
+  }
+
+  .salesRank {
+    padding: 0 32px 32px 72px;
+  }
+
+  :global {
+    .ant-tabs-bar {
+      padding-left: 16px;
+
+      .ant-tabs-nav .ant-tabs-tab {
+        padding-top: 16px;
+        padding-bottom: 14px;
+        line-height: 24px;
+      }
+    }
+
+    .ant-tabs-extra-content {
+      padding-right: 24px;
+      line-height: 55px;
+    }
+
+    .ant-card-head {
+      position: relative;
+    }
+
+    .ant-card-head-title {
+      align-items: normal;
+    }
+  }
+}
+
+.filterWrap {
+  display: block;
+  position: relative;
+  text-align: right;
+  z-index: 1;
+}
+
+.total {
+  position: absolute;
+  top: 42%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 30px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: @screen-lg) {
+  .filter {
+    display: none;
+  }
+}
+
+@media screen and (max-width: @screen-md) {
+  // TODO
+}
+
+@media screen and (max-width: @screen-sm) {
+  .filterWrap {
+    display: none;
+  }
+
+  .charts {
+    :global {
+      .ant-tabs-content {
+        padding-top: 30px;
+      }
+    }
+  }
+}

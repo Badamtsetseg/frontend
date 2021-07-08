@@ -1,0 +1,87 @@
+@import '~antd/dist/antd.less';
+@import '~antd/lib/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fullHeight {
+  height: 100vh;
+}
+
+.tox-notifications-container {
+  display: none !important;
+}
+
+.tox-statusbar__branding {
+  display: none !important;
+}
+
+.mt10 {
+  margin-top: 10px !important;
+}
+
+.mt25 {
+  margin-top: 25px;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.mb5 {
+  margin-bottom: 5px !important;
+}
+
+.mb10 {
+  margin-bottom: 10px !important;
+}
+
+.mb15 {
+  margin-bottom: 15px !important;
+}
+
+.ant-layout-content {
+  margin: 0 !important;
+  padding: @padding-lg;
+  background-color: #f0f2f5 !important;
+  border-left: 1px solid @border-color-split;
+  border-top: 1px solid @border-color-split;
+  border-top-left-radius: @border-radius-base;
+}
+
+.ant-menu-item {
+  i {
+    transition: 0.3s all ease-in-out !important;
+  }
+
+  &:hover {
+    i {
+      animation: swing ease-in-out 0.5s 1 alternate !important;
+    }
+  }
+}
+
+.ant-menu-item-selected {
+  background-color: rgba(28, 164, 252, 0.05) !important;
+}
+
+.ant-card-head-title {
+  font-family: Roboto Slab,serif !important;
+  font-weight: 700 !important;
+  font-size: 18px !important;
+}
+
+.btn-secondary {
+  background-color: #27ae60 !important;
+  border-color: darken(#27ae60, 5%) !important;
+}

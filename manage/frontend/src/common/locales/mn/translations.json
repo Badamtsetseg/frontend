@@ -1,0 +1,69 @@
+{
+  "logo": {
+    "text": "Astvision Starter",
+    "slogan": "Astvision Starter"
+  },
+  "navbar": {
+    "lang": "EN"
+  },
+  "menu": {
+    "deviceToken": "Device Token",
+    "home": "Нүүр",
+    "mobile": "Mobile",
+    "reference": {
+      "index": "Лавлах сан",
+      "faq": "Асуулт, хариулт",
+      "country": "Улс",
+      "data": "Лавлах сангийн өгөгдөл",
+      "type": "Лавлах сангийн төрөл"
+    },
+    "content": {
+      "index": "Агуулга",
+      "article": "Мэдээ"
+    },
+    "pushNotification": "Push Notification",
+    "user": {
+      "index": "Системийн хэрэглэгч",
+      "type": "Цахим ажлын байр",
+      "list": "Хэрэглэгчид"
+    }
+  },
+  "common": {
+    "action": {
+      "title": "Үйлдэл",
+      "create": "Бүртгэх",
+      "add": "Нэмэх",
+      "edit": "Засварлах",
+      "delete": "Устгах",
+      "back": "Буцах",
+      "search": "Хайх",
+      "clear": "Цэвэрлэх",
+      "update": "Засах",
+      "yes": "Тийм",
+      "no": "Үгүй"
+    },
+    "title": {
+      "total": "Нийт",
+      "selected": "Сонгосон",
+      "record": "бичлэг",
+      "empty": "Хоосон"
+    },
+    "placeholder": {
+      "date": "Огноо",
+      "daterange": {
+        "start": "Эхлэх огноо",
+        "end": "Дуусах огноо"
+      }
+    },
+    "alert": {
+      "warning": "Анхааруулга",
+      "delete": "Устгахдаа итгэлтэй байна уу?",
+      "createSuccess": "амжилттай үүсгэлээ"
+    }
+  },
+  "exception": {
+    "backToHome": "Нүүр хуудасруу буцах",
+    "403": "Уучлаарай, хандах эрхгүй байна",
+    "404": "Уучлаарай, хуудас олдсонгүй"
+  }
+}

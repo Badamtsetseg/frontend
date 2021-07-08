@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>mn.astvision.starter</groupId>
+    <artifactId>starter-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+    <name>Astvision Starter - Parent</name>
+
+    <modules>
+        <module>shared/auth</module>
+        <module>shared/aws-s3</module>
+        <module>shared/common</module>
+        <module>shared/email</module>
+        <module>shared/google-firebase</module>
+        <module>shared/model</module>
+        <module>manage/backend</module>
+        <module>cdn/file-server</module>
+    </modules>
+</project>

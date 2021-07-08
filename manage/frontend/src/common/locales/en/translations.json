@@ -1,0 +1,70 @@
+{
+  "logo": {
+    "text": "Astvision Starter",
+    "slogan": "Astvision Starter"
+  },
+  "navbar": {
+    "lang": "МН"
+  },
+  "menu": {
+    "deviceToken": "Device Token",
+    "feedback": "Feedback",
+    "home": "Home",
+    "mobile": "Mobile",
+    "reference": {
+      "index": "Reference",
+      "faq": "Faq",
+      "country": "Country",
+      "data": "Data",
+      "type": "Type"
+    },
+    "content": {
+      "index": "Content",
+      "article": "Article"
+    },
+    "pushNotification": "Push Notification",
+    "user": {
+      "index": "User",
+      "type": "Business role",
+      "list": "Users"
+    }
+  },
+  "common": {
+    "action": {
+      "title": "Action",
+      "create": "Create",
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "back": "Back",
+      "search": "Search",
+      "clear": "Clear",
+      "update": "Update",
+      "yes": "Yes",
+      "no": "No"
+    },
+    "title": {
+      "total": "Total",
+      "selected": "Selected",
+      "record": "recods",
+      "empty": "Empty"
+    },
+    "placeholder": {
+      "date": "Date",
+      "daterange": {
+        "start": "Start date",
+        "end": "End date"
+      }
+    },
+    "alert": {
+      "warning": "Warning",
+      "delete": "Are you sure you want to delete this?",
+      "createSuccess": "has successfully created"
+    }
+  },
+  "exception": {
+    "backToHome": "Back to home",
+    "403": "Sorry, you have no permission to access",
+    "404": "Sorry, the page you visited does not exist"
+  }
+}

@@ -11,7 +11,9 @@
 target/
 catalina.base_IS_UNDEFINED/
 nbproject/
+out/
 *.log
+*.class
 
 # apm
 apm-*.log

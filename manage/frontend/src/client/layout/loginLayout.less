@@ -1,0 +1,57 @@
+@import '~antd/lib/style/themes/default';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: auto;
+  background-color: @primary-color;
+
+  .content {
+    padding: 32px 0;
+    flex: 1;
+
+    .particles {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      bottom: 15px;
+      right: 15px;
+      border: 1px solid white;
+      opacity: 0.5;
+    }
+
+    .top {
+      text-align: center;
+
+      .header {
+        margin-bottom: 25px;
+        text-align: center;
+
+        a {
+          display: inline-block;
+          max-width: 320px;
+          text-decoration: none;
+          text-align: center;
+
+          .logo {
+            height: 44px;
+            margin-bottom: 25px;
+          }
+
+          .title {
+            display: block;
+            position: relative;
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            line-height: 20px;
+            font-weight: 400;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
