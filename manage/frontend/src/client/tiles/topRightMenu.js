@@ -47,7 +47,7 @@ class TopRightMenu extends Component {
         <Tooltip title='Тусламж'>
           <a
             target='_blank'
-            href='https://powered.mn'
+            href='https://astvision.mn'
             rel='noopener noreferrer'
             className={styles.action}
           >
