@@ -78,9 +78,9 @@ public class TokenUtil {
 
     public Boolean canTokenBeRefreshed(String token, Date lastPasswordReset) {
         final Date created = getCreatedDateFromToken(token);
-        return !(isCreatedBeforeLastPasswordReset(created, lastPasswordReset)) &&
+        return !isCreatedBeforeLastPasswordReset(created, lastPasswordReset) &&
                 (
-                        !(isTokenExpired(token))
+                        !isTokenExpired(token)
 //                                || ignoreTokenExpiration(token)
                 );
     }
@@ -107,8 +107,8 @@ public class TokenUtil {
         }
         return user != null
                 && username.equals(user.getLoginName())
-                && !(isTokenExpired(token))
-                && !(isCreatedBeforeLastPasswordReset(created, user.getPasswordChangeDate()));
+                && !isTokenExpired(token)
+                && !isCreatedBeforeLastPasswordReset(created, user.getPasswordChangeDate());
     }
 
     private Claims getClaimsFromToken(String token) {
